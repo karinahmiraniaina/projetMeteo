@@ -1,0 +1,125 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PAGE */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* CONTENEUR PRINCIPAL */
+.container {
+    width: 800px;
+    height: 515px;
+    background: linear-gradient(135deg, #4b6cb7, #d16ba5);
+    display: grid;
+    grid-template-rows: 80px 260px 130px 130px;
+    grid-template-columns: repeat(7, 1fr);
+    border: 1px solid rgba(255,255,255,0.7);
+}
+
+/* TITRE */
+h1 {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+/* BLOC METEO ACTUELLE */
+.bloc-logo-info {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+/* ICONE */
+.bloc-logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc-logo img {
+    width: 180px;
+}
+
+/* INFOS METEO */
+.bloc-info {
+    width: 60%;
+}
+
+.bloc-info .temps {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.bloc-info .temperature {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.bloc-info .localisation {
+    font-size: 22px;
+    opacity: 0.95;
+}
+
+/* TABLEAU METEO */
+.tableau-meteo {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.7);
+}
+
+/* LIGNES DU TABLEAU */
+.ligne {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* CELLULES */
+.cellule {
+    text-align: center;
+    padding: 18px 5px;
+    border-right: 1px solid rgba(255,255,255,0.7);
+}
+
+.cellule:last-child {
+    border-right: none;
+}
+
+/* SÉPARATION ENTRE HEURES ET JOURS */
+.ligne-jours {
+    border-top: 1px solid rgba(255,255,255,0.7);
+}
+
+/* TEXTE TABLEAU */
+.cellule p {
+    margin: 4px 0;
+}
+
+.heure,
+.jour {
+    font-size: 15px;
+}
+
+.valeur {
+    font-size: 17px;
+    font-weight: bold;
+}
